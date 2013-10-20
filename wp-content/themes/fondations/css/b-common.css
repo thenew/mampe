@@ -1,0 +1,66 @@
+/* Micro clearfix hack */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+}
+
+.hideme {
+	display: none;
+}
+
+/* Selection */
+::-moz-selection{
+	background: #000;
+	color: #fff;
+}
+::selection {
+	background: #000;
+	color: #fff;
+}
+
+
+/*  --------------------------------------------------
+  = Messages
+  -------------------------------------------------- */
+.fon_messages {
+  display: block;
+  width: 50%;
+  margin: 0 10%;
+}
+.fon_messages > li {
+  padding: 10px 10px 10px 10px;
+  margin-bottom:10px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.fon_messages p {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+}
+.error{
+  background-color: #C4685A;
+  border:1px solid #bc5752;
+}
+.success {
+  background-color: #75C95F;
+  border: 1px solid #8BDC7A;
+}
+.error p {
+  color: #FFF;
+}
+.success p {
+  color: #FFF;
+}

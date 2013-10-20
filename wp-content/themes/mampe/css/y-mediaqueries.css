@@ -1,0 +1,7 @@
+/* if screen height < 450px */
+@media all and (max-height:700px){
+    /*Tentative*/
+    body {
+	    background: url(img/bg_logo.png) -30px 300px no-repeat fixed;
+    }
+}

@@ -1,0 +1,10 @@
+
+@font-face {
+    font-family: 'hot';
+    src: url('fonts/gothic.eot');
+    src: url('fonts/gothic.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gothic.ttf') format('truetype'),
+         url('fonts/gothic.svg#gothic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

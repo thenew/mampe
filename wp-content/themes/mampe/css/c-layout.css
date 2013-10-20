@@ -1,0 +1,82 @@
+html {
+  height:100%;
+  background:url(img/bg_pattern.png) left top repeat-x #d8d7d8 fixed;
+}
+body {
+  height:100%;
+  background:url(img/bg_logo.png) left bottom no-repeat fixed;
+  overflow:hidden;
+  font-family: sans-serif;
+  color:#6d6c6c;
+}
+
+#wrapper { height:100%; }
+#debug-footer { display:none; }
+#site-title {
+  position:fixed;
+  top:170px;
+  right:100px;
+  z-index:99;
+  font-family:'hot', sans-serif;
+  text-align:right;
+}
+#site-title h1 { margin:0 0 8px 0; }
+#site-title h1 a {
+  font-size:48px;
+  color:#6d6c6c;
+}
+#site-title p {
+  margin:0;
+  font-size:25px;
+  color:#eb3503;
+}
+.main-of-page,
+.main {
+  position:absolute;
+  top:70px;
+  right:120px;
+  bottom:7%;
+  left:30px;
+  /*overflow: hidden;*/
+}
+.content {
+  position: relative;
+	height: 100%;
+}
+.content-part {
+  /*float: left;*/
+  margin-right: 340px;
+  height: 100%;
+  overflow: hidden;
+}
+.content-centric {
+  width: 530px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+}
+.main-column {
+  float: left;
+  width: 480px;
+  height: 100%;
+  margin-right: 10px;
+}
+.sidebar {
+  position: absolute;
+  right: 0;
+  top: 200px;
+  /*float: right;*/
+  width: 340px;
+  /*margin:200px 0 0 0;*/
+}
+.droits {
+  position:fixed;
+  bottom:3%;
+  left:30px;
+  font-family:'hot', sans-serif;
+  font-size:1.2em;
+}
+.droits a,
+.droits {
+  color:#e7491d;
+}
