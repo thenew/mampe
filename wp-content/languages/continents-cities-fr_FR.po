@@ -5,19 +5,19 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress 3.3\n"
-"Report-Msgid-Bugs-To: wp-polyglots@lists.automattic.com\n"
-"POT-Creation-Date: 2011-12-02 00:38:15+00:00\n"
-"PO-Revision-Date: 2011-12-03 19:22+0100\n"
-"Last-Translator: Amaury Balmer <amaury@wordpress-fr.net>\n"
+"Project-Id-Version: WordPress 3.7\n"
+"Report-Msgid-Bugs-To: http://wppolyglots.wordpress.com\n"
+"POT-Creation-Date: 2013-01-01 00:19:07+00:00\n"
+"PO-Revision-Date: 2013-10-24 14:05+0100\n"
+"Last-Translator: Xavier B. <xavier@wordpress-fr.net>\n"
 "Language-Team: WordPress Francophone <traduction@wordpress-fr.net>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1\n"
-"X-Poedit-Language: French\n"
-"X-Poedit-Country: France\n"
-"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n>1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: wp-admin/includes/continents-cities.php:7
 msgid "Africa"
@@ -1983,4 +1983,3 @@ msgstr "Wallis-et-Futuna"
 #: wp-admin/includes/continents-cities.php:493
 msgid "Yap"
 msgstr ""
-
