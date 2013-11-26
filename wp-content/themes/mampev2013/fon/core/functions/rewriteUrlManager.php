@@ -5,8 +5,9 @@ global $fon_routes;
 
 foreach (glob(FON_PATH.'/views/*.php') as $file) {
     $filename = basename($file, '.php');
-    $fonBase = new Fon_Base_Class();
-    $fon_routes[$filename] = $fonBase->beautify($filename);
+    // $fonBase = new Fon_Base_Class();
+    // $fon_routes[$filename] = $fonBase->beautify($filename);
+    $fon_routes[$filename] = $filename;
 }
 
 /* Add a custom URL */
@@ -37,6 +38,9 @@ add_filter('query_vars', function($qvars) {
 add_action('template_redirect', function(){
     global $fon_routes;
     $fon_query_action = get_query_var('fon_action');
+    // var_dump($fon_query_action);
+    // var_dump($fon_routes);
+    // die;
     if(empty($fon_query_action)) return;
     if(!array_key_exists(get_query_var('fon_action'), $fon_routes)) return;
     require_once(FON_PATH.'/views/'.$fon_routes[get_query_var('fon_action')].'.php');

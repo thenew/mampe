@@ -1,33 +1,43 @@
-<?php get_header(); ?>
-<div class="home-view">
-    <div class="grid grid-3-1">
-        <div>
-            <div class="posts-box">
-                <?php
-                $hargs = array(
-                    'post_type'      => 'post',
-                    'posts_per_page' => '3',
-                    'paged'          => $paged
-                    );
-                query_posts($hargs);
-                if(have_posts()): ?>
-                <ul>
-                    <?php while(have_posts()): the_post(); ?>
-                    <li class="item">
-                        <?php get_template_part('loop', 'short'); ?>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-                <?php 
-                fon_pagination();
-                endif;
-                wp_reset_query(); ?>
-            </div>  
-        </div>
-        <div>
-            <?php get_search_form(); ?>
-        </div>
-    </div>
-</div>
-<?php 
+<?php get_header();
+
+$index_args = array(
+    'post_type'      => 'portfolio',
+    'posts_per_page' => 12
+);
+$index_query = new WP_Query($index_args);
+if($index_query->have_posts()):
+        /*while($index_query->have_posts()):$index_query->the_post();
+            $post_id = get_the_ID();
+        endwhile;
+    endif;*/
+
+            ?>
+
+
+
+        <ul id="js-packery" class="col-list cf">
+            <?php
+            $index_posts_count = 0;
+            /*for ($i=0; $i < 5; $i++) { $index_posts_count++; ?>
+                <li class="item"><div class="work-item">dd <?php echo $index_posts_count; ?></div></li>
+            <?php }*/ ?>
+            <?php
+            $index_posts_count = 0;
+            while($index_query->have_posts()):$index_query->the_post(); $index_posts_count++;
+                $post_id = get_the_ID();
+                $thumb = fon_get_thumb( 't280', $post_id );
+                ?>
+                <li class="item">
+                    <div class="work-item">
+                        <div class="thumb" style="background-image: url(<?php echo $thumb[0]; ?>);" data-width="<?php echo $thumb[1]; ?>" data-height="<?php echo $thumb[2]; ?>"></div>
+                        <div class="details">
+                            <h2 class="title"><?php the_title(); ?></h2>
+                            <div class="period"><?php echo get_post_meta( $post_id, 'period_start', 1 ) .' &mdash; '. get_post_meta( $post_id, 'period_end', 1 ); ?></div>
+                        </div>
+                    </div>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    <?php endif;
+    wp_reset_postdata();
 get_footer();

@@ -9,6 +9,6 @@ $post = new Custom_Post_Type( 'Post' );
 /* Custom post types
    ----------------------------- */
 
-$game = new Custom_Post_Type( 'portfolio' );
+$portfolio = new Custom_Post_Type( 'portfolio' );
 // $game->add_taxonomy( 'genre' );
 // $game->add_taxonomy( 'support' );
