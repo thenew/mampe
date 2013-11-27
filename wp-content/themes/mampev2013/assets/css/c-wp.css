@@ -31,3 +31,21 @@
 .wp-caption img{ }
 .gallery{ }
 .gallery .gallery-item{ }
+
+
+.blabla {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.blabla img {
+    max-width: 100%;
+    height: auto;
+}
+
+.blabla ol,
+.blabla ul,
+.blabla p,
+.blabla img {
+    margin-bottom: 15px;
+}

@@ -1,11 +1,8 @@
-<?php get_header(); ?>
-<div class="span9">
-    <?php the_title(); ?>
+<?php get_header();
+the_post();
+?>
+<div class="blabla columns-y">
     <?php the_content(); ?>
-
 </div>
-<div class="span3">
-    <?php get_sidebar(); ?>
-</div>
-<?php 
+<?php
 get_footer();

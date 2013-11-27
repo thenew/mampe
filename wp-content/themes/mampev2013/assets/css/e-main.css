@@ -196,4 +196,26 @@ a {
     color: #fff;
 }
 
+/* ----------------------------------------------------------
+   single-portfolio
+   ------------------------------------------------------- */
 
+.single-portfolio {
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.single-portfolio .columns-y {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    padding: 60px 40px 0 40px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}

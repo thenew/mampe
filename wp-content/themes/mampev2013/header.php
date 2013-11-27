@@ -19,7 +19,7 @@
 
 <?php
 $fon_body_class = '';
-if(is_home()) {
+if(is_home() || is_singular('portfolio')) {
     $fon_body_class = "theme-black";
 }
 ?>
