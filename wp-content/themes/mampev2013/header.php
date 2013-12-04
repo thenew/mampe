@@ -38,17 +38,17 @@ if( 'blog' == get_query_var('fon_action') ) {
                 </li>
                 <li class="item">
                     <div class="link-box">
-                        <a class="link" href="">About</a>
+                        <a class="link" href="<?php echo site_url('/about'); ?>">About</a>
                     </div>
                 </li>
                 <li class="item">
                     <div class="link-box">
-                        <a class="link" href="">Contact</a>
+                        <a class="link" href="<?php echo site_url('/contact'); ?>">Contact</a>
                     </div>
                 </li>
                 <li class="item">
                     <div class="link-box">
-                        <a class="link" href="/blog">Blog</a>
+                        <a class="link" href="<?php echo site_url('/blog'); ?>">Blog</a>
                     </div>
                 </li>
             </ul>
