@@ -34,8 +34,16 @@
 
 
 .blabla {
-    font-size: 18px;
+    font-family: 'Disco', sans-serif;
+    letter-spacing: -2.9px;
+    font-size: 17px;
     line-height: 1.4;
+}
+
+.blabla-title {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 15px;
 }
 
 .blabla img {

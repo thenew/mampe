@@ -1,5 +1,6 @@
     </div><!-- .main -->
-    <footer>
+    <footer class="footer">
+        &copy; AMPE Mathilde
     </footer>
 
     <!--[if lte IE 8]>

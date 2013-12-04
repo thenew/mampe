@@ -1,22 +1,37 @@
-<?php
-get_header();
+<?php get_header();
 
-$blog_args = array(
+$index_args = array(
     'post_type'      => 'post',
-    'posts_per_page' => 6,
-    'paged' => $paged
+    'posts_per_page' => 12
 );
-$blog_query = new WP_Query($blog_args);
-if($blog_query->have_posts()): ?>
-    <ul> PAGE BLOG
-        <?php while($blog_query->have_posts()):$blog_query->the_post(); ?>
-            <li>
-                <?php the_title(); ?>
+$index_query = new WP_Query($index_args);
+if($index_query->have_posts()):
+    ?>
+    <ul id="js-packery" class="col-list cf">
+        <?php
+        $index_posts_count = 0;
+        while($index_query->have_posts()):$index_query->the_post(); $index_posts_count++;
+            $post_id = get_the_ID();
+            $thumb = fon_get_thumb( 't280', $post_id );
+            ?>
+            <li class="item">
+                <div class="post-item">
+                    <a href="<?php the_permalink(); ?>">
+                        <!-- <div class="thumb" style="background-image: url(<?php echo $thumb[0]; ?>);" data-width="<?php echo $thumb[1]; ?>" data-height="<?php echo $thumb[2]; ?>"></div> -->
+                        <div class="thumb"><img src="<?php echo $thumb[0]; ?>" /></div>
+                    </a>
+                    <div class="blabla">
+                        <a href="<?php the_permalink(); ?>">
+                            <h2 class="post-title"><?php the_title(); ?></h2>
+                        </a>
+                            <div class="post-excerpt">
+                                <?php the_excerpt(); ?>
+                            </div>
+                    </div>
+                </div>
             </li>
         <?php endwhile; ?>
     </ul>
 <?php endif;
 wp_reset_postdata();
-
 get_footer();
-?>

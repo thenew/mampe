@@ -213,9 +213,9 @@ a:hover {
 }
 
 .columns-y {
-    -moz-column-width: 200px;
-    -webkit-column-width: 200px;
-    column-width: 200px;
+    -moz-column-width: 275px;
+    -webkit-column-width: 275px;
+    column-width: 275px;
     -moz-column-gap: 40px;
     -webkit-column-gap: 40px;
     column-gap: 40px;

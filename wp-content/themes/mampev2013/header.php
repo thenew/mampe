@@ -19,7 +19,9 @@
 
 <?php
 $fon_body_class = '';
-if(is_home() || is_singular('portfolio')) {
+if( 'blog' == get_query_var('fon_action') ) {
+    $fon_body_class = "theme-white";
+} else if( is_home() || is_singular('portfolio') ) {
     $fon_body_class = "theme-black";
 }
 ?>
@@ -28,10 +30,27 @@ if(is_home() || is_singular('portfolio')) {
     <header class="header">
         <nav class="main-nav">
             <ul class="cf">
-                <li class="item home-item"><h1 class="home-title"><a class="link" href="<?php echo site_url(); ?>">Ampe Mathilde</a></h1></li>
-                <li class="item"><a class="link" href="">About</a></li>
-                <li class="item"><a class="link" href="">Contact</a></li>
-                <li class="item"><a class="link" href="/blog">Blog</a></li>
+                <li class="item home-item">
+                    <?php $tag = ( is_home() ) ? 'h1' : 'div'; ?>
+                    <<?php echo $tag; ?> class="link-box home-title">
+                        <a class="link" href="<?php echo site_url(); ?>">Ampe Mathilde</a>
+                    </<?php echo $tag; ?>>
+                </li>
+                <li class="item">
+                    <div class="link-box">
+                        <a class="link" href="">About</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="link-box">
+                        <a class="link" href="">Contact</a>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="link-box">
+                        <a class="link" href="/blog">Blog</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>

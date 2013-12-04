@@ -64,7 +64,7 @@ function fon_get_thumb( $format = 'post-thumbnail', $post_id = null ) {
 }
 
 function fon_get_thumb_url( $format = 'post-thumbnail', $post_id = null ) {
-    $thumb = fon_get_thumb( get_post_thumbnail_id( $post_id ), $format, false );
+    $thumb = fon_get_thumb( $format, $post_id );
     return $thumb[0];
 }
 
