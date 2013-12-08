@@ -10,5 +10,6 @@ $post = new Custom_Post_Type( 'Post' );
    ----------------------------- */
 
 $portfolio = new Custom_Post_Type( 'portfolio' );
-// $game->add_taxonomy( 'genre' );
+$experience = new Custom_Post_Type( 'experience' );
+$experience->add_taxonomy( 'type' );
 // $game->add_taxonomy( 'support' );

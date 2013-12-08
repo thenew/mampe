@@ -25,6 +25,23 @@ $fon_meta_boxes[] = array(
     )
 );
 
+$fon_meta_boxes[] = array(
+    'title' => 'Coordonnées',
+    'pages' => array( 'experience' ),
+    'fields' => array(
+        array(
+            'name'  => 'X',
+            'id'    => "position_x",
+            'type'  => 'text',
+        ),
+        array(
+            'name'  => 'Y',
+            'id'    => "position_y",
+            'type'  => 'text',
+        )
+    )
+);
+
 
 
 

@@ -256,3 +256,139 @@ a {
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+/* ----------------------------------------------------------
+   About
+   ------------------------------------------------------- */
+
+.about-page {
+    width: 980px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.about-page .map-col {
+    float: left;
+    width: 650px;
+}
+
+.about-page .map {
+    position: relative;
+    width: 526px;
+    height: 511px;
+    background: url(../img/map.png) left top no-repeat;
+}
+
+.about-page .content-col {
+    float: left;
+    width: 280px;
+    margin-left: 50px;
+}
+
+.about-page .exp {
+    position: absolute;
+    cursor: pointer;
+    padding: 20px;
+    margin: -20px 0 0 -20px;
+}
+
+.about-page .dot {
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #d4d4d4;
+}
+
+.about-page .type-professional .dot {
+    background-color: #ed6900;
+}
+
+.about-page .exp .label {
+    position: absolute;
+    top: -10px;
+    left: 61px;
+    opacity: 0;
+    min-width: 180px;
+    max-width: 230px;
+    padding: 2px 5px 5px 5px;
+    border: 1px solid #c1c1c1;
+    border-radius: 2px;
+    font-family: 'Disco', sans-serif;
+    letter-spacing: -2px;
+    background-color: rgba(15,13,15,.7);
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.about-page .exp.label-left .label {
+    left: auto;
+    right: 61px;
+}
+
+.about-page .exp.type-professional .label {
+    border-color: #ed6900;
+}
+
+.about-page .exp:hover .label {
+    opacity: .999;
+}
+
+.about-page .exp .label:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -40px;
+    display: block;
+    width: 39px;
+    height: 15px;
+    border-top: 1px solid #c1c1c1;
+    border-left: 1px solid #c1c1c1;
+}
+
+.about-page .exp.label-left .label:before {
+    left: auto;
+    right: -40px;
+    border-left: none;
+    border-right: 1px solid #c1c1c1;
+}
+
+.about-page .exp.type-professional .label:before {
+    border-color: #ed6900;
+}
+
+.about-page .exp .label .content {
+    color: #c1c1c1;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.about-page .exp .label strong {
+    font-size: 14px;
+}
+
+.about-page .exp .label h2 {
+    font-size: 18px
+}
+
+.about-page .exp .label .title {
+    text-transform: uppercase;
+}
+
+.about-page .types {
+    margin-top: 40px;
+}
+
+.about-page .types-list > li {
+    font-family: 'Disco', sans-serif;
+    font-size: 18px;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+.about-page .types-list .dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+}
