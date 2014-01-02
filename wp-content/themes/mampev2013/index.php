@@ -13,11 +13,12 @@ if($index_query->have_posts()):
         while($index_query->have_posts()):$index_query->the_post(); $index_posts_count++;
             $post_id = get_the_ID();
             $thumb = fon_get_thumb( 't280', $post_id );
+            $thumb_large = fon_get_thumb( 'large', $post_id );
             ?>
             <li class="item">
                 <div class="work-item">
                     <a href="<?php the_permalink(); ?>">
-                        <div class="thumb" style="background-image: url(<?php echo $thumb[0]; ?>);" data-width="<?php echo $thumb[1]; ?>" data-height="<?php echo $thumb[2]; ?>"></div>
+                        <div class="thumb" style="background-image: url(<?php echo $thumb[0]; ?>);" data-full-src="<?php echo $thumb_large[0]; ?>" data-width="<?php echo $thumb[1]; ?>" data-height="<?php echo $thumb[2]; ?>"></div>
                         <div class="details">
                             <h2 class="title"><?php the_title(); ?></h2>
                             <div class="period"><?php echo get_post_meta( $post_id, 'period_start', 1 ) .' &mdash; '. get_post_meta( $post_id, 'period_end', 1 ); ?></div>
