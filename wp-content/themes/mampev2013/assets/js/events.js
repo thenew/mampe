@@ -44,4 +44,18 @@ window.addEvent('domready',function(){
         });
     });
 
+    // dynamic-height
+    $$('.thumb.dynamic-height').each(function(thumb) {
+        var w = thumb.get('data-width');
+        var h = thumb.get('data-height');
+        if(!w || !h) return;
+        var realW = thumb.getWidth();
+        var ratio = realW / w;
+        var realH = h * ratio;
+
+        thumb.setStyles({
+            'height': realH
+        });
+    });
+
 });

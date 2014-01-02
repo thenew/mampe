@@ -220,13 +220,16 @@ a {
 }
 
 .post-item .thumb {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     margin-bottom: 20px;
 }
-
+/*
 .post-item .thumb img {
     width: 100%;
 }
-
+*/
 .post-item .post-title {
     font-size: 18px;
     margin-bottom: 28px;
@@ -392,4 +395,17 @@ a {
     width: 8px;
     height: 8px;
     margin-right: 10px;
+}
+
+/* ----------------------------------------------------------
+   Page
+   ------------------------------------------------------- */
+
+.page-wrap {
+    margin: 80px auto 20px;
+}
+
+.page-wrap .blabla {
+    font-size: 18px;
+    letter-spacing: -2px;
 }

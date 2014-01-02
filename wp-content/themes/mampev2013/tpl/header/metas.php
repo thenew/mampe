@@ -2,7 +2,7 @@
 global $post;
 if(is_singular()) {
     $title = get_the_title();
-    $description = strip_tags(strip_shortcodes($post->post_content));
+    $description = truncate( strip_tags(strip_shortcodes($post->post_content)), 150);
     $url = get_permalink();
 } else {
     $title = wp_title('-', 0);
@@ -13,7 +13,6 @@ $image = TEMPLATE_URL.'/screenshot.png';
 $name = get_bloginfo('name');
 
 ?>
-
 <title><?php echo $title ?></title>
 <meta name="description" content="<?php echo $description ?>" />
 

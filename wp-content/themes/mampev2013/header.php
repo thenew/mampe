@@ -12,17 +12,16 @@
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="alternate" type="application/rss+xml" href="<?php echo get_bloginfo('rss2_url'); ?>" title="<?php echo esc_html(get_bloginfo('name'), 1); ?> - Flux RSS des articles" />
     <link rel="alternate" type="application/rss+xml" href="<?php echo get_bloginfo('comments_rss2_url'); ?>" title="<?php echo esc_html(get_bloginfo('name'), 1); ?> - Flux RSS des commentaires" />
-
     <?php include TEMPLATEPATH . '/tpl/header/metas.php'; ?>
     <?php wp_head(); ?>
 </head>
 
 <?php
-$fon_body_class = '';
-if( 'blog' == get_query_var('fon_action') ) {
-    $fon_body_class = "theme-white";
+$fon_body_class = 'theme-black';
+if( 'blog' == get_query_var('fon_action') || is_singular( 'post' ) ) {
+    $fon_body_class = 'theme-white';
 } else if( is_home() || is_singular('portfolio') ) {
-    $fon_body_class = "theme-black";
+    $fon_body_class = 'theme-black';
 }
 ?>
 

@@ -122,3 +122,9 @@ function fon_upload_files($imgs) {
     }
 }
 
+function truncate( $text = ' ', $chars = 150 ) {
+    $text = substr( $text, 0, $chars );
+    $text = substr( $text, 0, strrpos( $text, ' ' ) );
+    $text = $text . " ...";
+    return $text;
+}
