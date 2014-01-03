@@ -1,29 +1,43 @@
+<?php get_header();
+?>
+<div class="page-wrap">
+    <div class="blabla">
+        <h1 class="blabla-title">Page not found</h1>
+        See my <a href="<?php echo site_url('/'); ?>">projects</a>, my <a href="<?php echo site_url('/blog/' ); ?>">posts</a>
+        <br />or pick one randomly below.
+    </div>
+</div>
 <?php
-$param_404 = str_replace(array('?', '/', '=', '-'), ' ', strip_tags($_SERVER['REQUEST_URI']));
+$pagenotfound_args = array(
+    'post_type'      => array('portfolio', 'post'),
+    'posts_per_page' => 36,
+    'orderby' => 'rand'
+);
+$pagenotfound_query = new WP_Query($pagenotfound_args);
+if($pagenotfound_query->have_posts()):
+    ?>
+    <ul id="js-packery" class="cf col-list col-list-404">
+        <?php
+        $pagenotfound_posts_count = 0;
+        while($pagenotfound_query->have_posts()): $pagenotfound_query->the_post(); $pagenotfound_posts_count++;
+            $post_id = get_the_ID();
+            $thumb = fon_get_thumb( 't280', $post_id );
+            $thumb_large = fon_get_thumb( 'large', $post_id );
+            ?>
+            <li class="item">
+                <div class="work-item">
+                    <a href="<?php the_permalink(); ?>">
+                        <div class="thumb" style="background-image: url(<?php echo $thumb[0]; ?>);" data-full-src="<?php echo $thumb_large[0]; ?>" data-width="<?php echo $thumb[1]; ?>" data-height="<?php echo $thumb[2]; ?>"></div>
+                        <div class="details">
+                            <h2 class="title"><?php the_title(); ?></h2>
+                            <div class="period"><?php echo get_post_meta( $post_id, 'period_start', 1 ) .' &mdash; '. get_post_meta( $post_id, 'period_end', 1 ); ?></div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        <?php endwhile; ?>
+    </ul>
+<?php endif;
+wp_reset_postdata();
 
-get_header();
-// echo '<div class="page">';
-    // echo '<h1>' . __('404 Page not found', 'fon_lang') . '</h1>';
-    if (!empty($param_404)) {
-        echo '<h2 class="e404-title">'.$param_404.' ? </h2>';
-        $args_404 = array(
-            // 'posts_per_page' => '5',
-            // 'post_type' => 'any',
-            's' => $param_404
-        );
-        $q_404 = new WP_Query( $args_404 );
-        if (have_posts()) :
-            // echo '<ul>';
-            //     while ( $the_query->have_posts() ) : $the_query->the_post();
-            //         echo '<li>';
-            //         get_template_part('loop', 'short');
-            //         echo '</li>';
-            //     endwhile;
-            // echo '</ul>';
-        endif;
-        wp_reset_postdata();
-    }
-// echo '</div>';
-// get_sidebar();
-echo '<script type="text/javascript" src="'.ASSETS_URL.'/js/e404.js"></script>';
 get_footer();

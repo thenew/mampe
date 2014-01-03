@@ -159,6 +159,10 @@ a {
     page-break-after: always;
 }
 
+.col-list-404 .item {
+    width: 16.5%;
+}
+
 .col-list .item:nth-child(3n) {
     /*padding-right: 0;*/
     -webkit-column-break-after: avoid;
@@ -214,6 +218,10 @@ a {
     text-transform: uppercase;
 }
 
+.col-list-404 .work-item .title {
+    font-size: 16px;
+}
+
 .work-item .period {
     font-size: 14px;
     color: #fff;
@@ -238,16 +246,16 @@ a {
 }
 
 /* ----------------------------------------------------------
-   single-portfolio
+   single
    ------------------------------------------------------- */
 
-.single-portfolio {
+.single {
     width: auto;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
-.single-portfolio .columns-y {
+.single .columns-y {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -408,4 +416,8 @@ a {
 .page-wrap .blabla {
     font-size: 18px;
     letter-spacing: -2px;
+}
+
+.error404 .page-wrap {
+    margin-bottom: 60px;
 }

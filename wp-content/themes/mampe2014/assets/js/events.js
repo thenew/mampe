@@ -1,18 +1,5 @@
 window.addEvent('domready',function(){
 
-    $$('#js-packery .work-item').each(function(el) {
-        var thumb = el.getElements('.thumb')[0];
-        if(!thumb.get('data-width')) return;
-        var w = thumb.get('data-width').toInt(); // 16
-        var h = thumb.get('data-height').toInt(); // 9
-        var elW = el.getWidth().toInt(); // 10
-
-        var ratio = elW/w;
-        var elH = h*ratio;
-        el.setStyles({ 'height': elH });
-
-    });
-
     var pckry = new Packery( $('js-packery'), {
       // options
       itemSelector: '.item',
@@ -45,9 +32,9 @@ window.addEvent('domready',function(){
     });
 
     // dynamic-height
-    $$('.thumb.dynamic-height').each(function(thumb) {
-        var w = thumb.get('data-width');
-        var h = thumb.get('data-height');
+    $$('.thumb.dynamic-height, #js-packery .work-item').each(function(thumb) {
+        var w = thumb.get('data-width').toInt();
+        var h = thumb.get('data-height').toInt();
         if(!w || !h) return;
         var realW = thumb.getWidth();
         var ratio = realW / w;

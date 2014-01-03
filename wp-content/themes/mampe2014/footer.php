@@ -1,11 +1,8 @@
-    </div><!-- .main -->
+    </div><?php /* .main */ ?>
     <footer class="footer">
         &copy; AMPE Mathilde
     </footer>
 
-    <!--[if lte IE 8]>
-        <script type="text/javascript" src="<?php echo ASSETS_URL; ?>/js/selectivizr.js"></script>
-    <![endif]-->
     <?php if(!ENV_DEV): ?>
         <script>
             var _gaq=[['_setAccount','UA-30625675-1'],['_trackPageview']];
