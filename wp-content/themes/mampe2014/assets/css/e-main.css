@@ -1,5 +1,5 @@
 body {
-    min-width: 1000px;
+    /*min-width: 1000px;*/
     margin: 0 auto;
     opacity: .9999;
     -webkit-font-smoothing: subpixel-antialiased;
@@ -255,6 +255,9 @@ a {
     overflow-y: hidden;
 }
 
+.single .h-container {
+}
+
 .single .columns-y {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -262,8 +265,10 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 32px;
     width: auto;
-    height: 100vh;
+    /*height: calc(100vh - 34px);*/
     padding: 60px 40px 34px 40px;
     overflow-x: auto;
     overflow-y: hidden;

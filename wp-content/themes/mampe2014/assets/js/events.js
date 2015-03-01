@@ -1,10 +1,18 @@
 window.addEvent('domready',function(){
 
-    var pckry = new Packery( $('js-packery'), {
-      // options
-      itemSelector: '.item',
-      gutter: 0,
-      columnWidth: '.item'
+    if($('js-packery')) {
+        var pckry = new Packery( $('js-packery'), {
+          // options
+          itemSelector: '.item',
+          gutter: 0,
+          columnWidth: '.item'
+        });
+    }
+
+    $$('.columns-y').each(function(el) {
+        setTimeout(function() {
+            var ss = new ScrollSide(el);
+        }, 300);
     });
 
     // replace images with hi-res version
